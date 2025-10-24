@@ -1,0 +1,14 @@
+<template>
+    <lightning-card>
+        <template if:true={trackingData.length}>
+            <lightning-datatable
+                key-field="Id"
+                data={trackingData}
+                columns={columns}>
+            </lightning-datatable>
+        </template>
+        <template if:false={trackingData.length}>
+            <p class="slds-p-around_medium">No field changes recorded yet.</p>
+        </template>
+    </lightning-card>
+</template>
